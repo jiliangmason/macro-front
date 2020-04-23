@@ -1,0 +1,33 @@
+{
+    "presets": [
+        "env",
+        "react"
+    ],
+    "plugins": [
+        [
+            "transform-runtime",
+            {
+                "helpers": false,
+                "polyfill": false
+            }
+        ],
+        ["import", {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": true
+        }, {
+            "libraryName": "@ant-design",
+            "libraryDirectory": "es",
+            "style": true
+        }],  
+        [
+            "transform-object-rest-spread"
+        ],
+        [
+            "lodash"
+        ],
+        [
+            "syntax-dynamic-import"
+        ]
+    ]
+}
