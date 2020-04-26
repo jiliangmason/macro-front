@@ -3,7 +3,7 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-23 13:55:00
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-23 14:49:31
+ * @LastEditTime: 2020-04-26 10:18:36
  */
 const { name } = require('./package');
 
@@ -27,8 +27,8 @@ module.exports = {
     config.historyApiFallback = true;
 
     config.hot = true;
-    config.watchContentBase = false;
-    config.liveReload = false;
+    config.watchContentBase = true;
+    config.liveReload = true;
 
     return config;
   },

@@ -3,7 +3,7 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-23 14:34:47
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-23 14:47:57
+ * @LastEditTime: 2020-04-26 16:23:36
  */
 import { registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start, initGlobalState } from 'qiankun';
 import './index.less';
@@ -21,7 +21,7 @@ import render from './render/ReactRender';
 /**
  * Step1 初始化应用（可选）
  */
-render({ loading: true });
+render({ loading: false });
 
 /**
  * Step2 注册子应用
@@ -31,20 +31,20 @@ registerMicroApps(
   [
     {
       name: 'app1',
-      entry: '//localhost:7100',
-      container: '#app1',
+      entry: '//localhost:7101',
+      container: '#subapp-viewport',
       activeRule: '/app1',
     },
     {
       name: 'app2',
-      entry: '//localhost:7101',
-      container: '#app2',
+      entry: '//localhost:7102',
+      container: '#subapp-viewport',
       activeRule: '/app2',
     },
     {
       name: 'app3',
-      entry: '//localhost:7102',
-      container: '#app3',
+      entry: '//localhost:7103',
+      container: '#subapp-viewport',
       activeRule: '/app3',
     }
   ],

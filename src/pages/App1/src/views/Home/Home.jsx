@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function DataAnalyze() {
-    useEffect(() => {}, []);
+  useEffect(() => {}, []);
 
-    return <div>macro-demo app1</div>;
+  return <div>macro-demo app1</div>;
 }

@@ -3,7 +3,7 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-23 13:55:00
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-23 14:53:55
+ * @LastEditTime: 2020-04-26 10:18:36
  */
 const { name } = require('./package');
 
@@ -20,15 +20,15 @@ module.exports = {
   devServer: _ => {
     const config = {};
 
-    config.port = '7102';
+    config.port = '7100';
     config.headers = {
       'Access-Control-Allow-Origin': '*',
     };
     config.historyApiFallback = true;
 
     config.hot = true;
-    config.watchContentBase = false;
-    config.liveReload = false;
+    config.watchContentBase = true;
+    config.liveReload = true;
 
     return config;
   },
