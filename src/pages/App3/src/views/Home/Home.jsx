@@ -1,7 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
-export default function DataAnalyze() {
+export default function Home(props) {
+  const { history } = props;
   useEffect(() => {}, []);
 
-  return <div>macro-demo app3</div>;
+  function goTest() {
+    history.push("/Test3");
+  }
+
+  return (
+    <Main>
+      <Content>app3</Content>
+      <a onClick={goTest}>go test3</a>
+    </Main>
+  );
 }
+
+const Main = styled.main`
+  color: black;
+`;
+const Content = styled.div`
+  padding-bottom: 20px;
+`;

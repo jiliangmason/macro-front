@@ -3,7 +3,7 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-23 14:34:47
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-26 16:23:36
+ * @LastEditTime: 2020-04-27 14:51:19
  */
 import { registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start, initGlobalState } from 'qiankun';
 import './index.less';
@@ -31,19 +31,19 @@ registerMicroApps(
   [
     {
       name: 'app1',
-      entry: '//localhost:7101',
+      entry: '//localhost:9001',
       container: '#subapp-viewport',
       activeRule: '/app1',
     },
     {
       name: 'app2',
-      entry: '//localhost:7102',
+      entry: '//localhost:9002',
       container: '#subapp-viewport',
       activeRule: '/app2',
     },
     {
       name: 'app3',
-      entry: '//localhost:7103',
+      entry: '//localhost:9003',
       container: '#subapp-viewport',
       activeRule: '/app3',
     }

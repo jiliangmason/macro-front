@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --port 7099",
-    "start:multiple": "parcel multiple.html --port 7099",
+    "start": "parcel index.html --port 9000",
+    "start:multiple": "parcel multiple.html --port 9000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "devDependencies": {
     "less": "^3.9.0",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "qiankun": "^2.0.5",
