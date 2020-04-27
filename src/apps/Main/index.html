@@ -1,0 +1,40 @@
+<!--
+ * @Author: 杨伊乐
+ * @Desctiption: 文件头部
+ * @Date: 2020-04-23 15:57:38
+ * @LastEditors: 杨伊乐
+ * @LastEditTime: 2020-04-27 18:54:59
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>macro-front example</title>
+  </head>
+
+  <body>
+    <div class="mainapp">
+      <!-- 标题栏 -->
+      <header class="mainapp-header">
+        <h1>QianKun</h1>
+      </header>
+      <div class="mainapp-main">
+        <!-- 侧边栏 -->
+        <ul class="mainapp-sidemenu">
+          <li onclick="push('/app1')">app1</li>
+          <li onclick="push('/app2')">app2</li>
+          <li onclick="push('/app3')">app3</li>
+        </ul>
+        <!-- 子应用  -->
+        <main id="subapp-container"></main>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script>
+      function push(subapp) {
+        history.pushState(null, subapp, subapp);
+      }
+    </script>
+  </body>
+</html>
