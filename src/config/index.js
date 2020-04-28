@@ -3,7 +3,7 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-27 17:34:54
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-28 09:52:42
+ * @LastEditTime: 2020-04-28 15:31:21
  */
 const apps = [{
   name: 'app1',

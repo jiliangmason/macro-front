@@ -3,7 +3,7 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-23 15:57:38
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-28 09:00:13
+ * @LastEditTime: 2020-04-28 18:33:31
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,20 +14,10 @@
 
   <body>
     <div class="mainapp">
-      <!-- 标题栏 -->
-      <header class="mainapp-header">
-        <h1>demo</h1>
-      </header>
-      <div class="mainapp-main">
-        <!-- 侧边栏 -->
-        <ul class="mainapp-sidemenu">
-          <li onclick="push('/app1')">app1</li>
-          <li onclick="push('/app2')">app2</li>
-          <li onclick="push('/app3')">app3</li>
-        </ul>
-        <!-- 子应用  -->
-        <main id="subapp-container"></main>
-      </div>
+      <!-- 主应用 -->
+      <div id="app_main"></div>
+      <!-- 子应用  -->
+      <main id="subapp-container"></main>
     </div>
 
     <script src="./index.js"></script>
