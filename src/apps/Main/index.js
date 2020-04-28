@@ -3,11 +3,12 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-23 14:34:47
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-28 09:12:54
+ * @LastEditTime: 2020-04-28 14:22:45
  */
 import { registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start, initGlobalState } from 'qiankun';
 import './index.less';
 import { apps } from '../../config';
+import routes from './src/routes'
 
 /**
  * 主应用 **可以使用任意技术栈**

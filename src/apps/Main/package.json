@@ -16,9 +16,12 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
-    "qiankun": "^2.0.5",
+    "qiankun": "^2.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.1.0",
     "vue": "^2.6.11"
   }
 }
