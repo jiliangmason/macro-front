@@ -3,16 +3,17 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-27 11:51:43
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-27 18:15:26
+ * @LastEditTime: 2020-04-28 09:47:18
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { name } = require('./package');
+const { getPortByName } = require('../../config');
 
 module.exports = {
   entry: './index.js',
   devtool: 'source-map',
   devServer: {
-    port: '9002',
+    port: getPortByName(name),
     clientLogLevel: 'warning',
     disableHostCheck: true,
     compress: true,
