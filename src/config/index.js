@@ -3,23 +3,18 @@
  * @Desctiption: 文件头部
  * @Date: 2020-04-27 17:34:54
  * @LastEditors: 杨伊乐
- * @LastEditTime: 2020-04-28 15:31:21
+ * @LastEditTime: 2020-05-11 15:11:43
  */
 const apps = [{
-  name: 'app1',
+  name: 'cms-ts-template',
+  entry: '//localhost:9001',
+  activeRule: '/cms-main/cms-ts-template',
+  port: 9001
+}, {
+  name: 'cms-react-template',
   entry: '//localhost:9002',
-  activeRule: '/app1',
+  activeRule: '/cms-main/cms-react-template',
   port: 9002
-}, {
-  name: 'app2',
-  entry: '//localhost:9003',
-  activeRule: '/app2',
-  port: 9003
-}, {
-  name: 'app3',
-  entry: '//localhost:9004',
-  activeRule: '/app3',
-  port: 9004
 }];
 
 const getPortByName = (name) => {

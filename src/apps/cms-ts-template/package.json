@@ -1,0 +1,178 @@
+{
+  "name": "cms-ts-template",
+  "version": "1.0.4",
+  "description": "cms TypeScript项目模板",
+  "author": "",
+  "repository": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "cross-env NODOE_ENV=development SERVER_ENV=dev node build/scripts/start.js",
+    "start:sit": "cross-env NODOE_ENV=development SERVER_ENV=sit node build/scripts/start.js",
+    "build": "cross-env NODOE_ENV=production SERVER_ENV=sit node build/scripts/build.js",
+    "build:dev": "cross-env NODOE_ENV=production SERVER_ENV=dev node build/scripts/build.js",
+    "build:sit": "cross-env NODOE_ENV=production SERVER_ENV=sit node build/scripts/build.js",
+    "build:uat": "cross-env NODOE_ENV=production SERVER_ENV=uat node build/scripts/build.js",
+    "build:grey": "cross-env NODOE_ENV=production SERVER_ENV=grey node build/scripts/build.js",
+    "build:prod": "cross-env NODOE_ENV=production SERVER_ENV=prod node build/scripts/build.js",
+    "pub:dev": "cross-env npm run build:dev && deploy-test -S DEV",
+    "pub:sit": "cross-env npm run build:sit && deploy-test",
+    "pub:uat": "cross-env npm run build:uat && deploy-test -S UAT",
+    "pub:grey": "cross-env npm run build:grey && deploy-test -S GREY",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "flow": false,
+          "typescript": true
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd-mobile",
+          "style": "css"
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "semi": true,
+    "trailingComma": "es5",
+    "endOfLine": "auto"
+  },
+  "dependencies": {
+    "@zycfc/apis": "^1.1.0",
+    "@zycfc/chevalier": "^2.2.0",
+    "@zycfc/device": "^1.1.0",
+    "@zycfc/geetest": "^2.1.0",
+    "@zycfc/get-url-params": "^1.1.0",
+    "@zycfc/js-bridge": "^2.2.2",
+    "@zycfc/jweixin": "^1.6.0",
+    "@zycfc/request": "^1.0.4",
+    "@zycfc/share": "^1.2.0",
+    "@zycfc/statics": "^1.0.6",
+    "@zycfc/stats": "^1.1.2",
+    "@zycfc/storage": "^1.1.0",
+    "@zycfc/styled-px2vw": "^1.0.10",
+    "@zycfc/zycfc-request": "^1.1.0",
+    "antd-mobile": "^2.3.1",
+    "eruda": "^2.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-app-polyfill": "^1.0.5",
+    "react-dom": "^16.12.0",
+    "react-keep-alive": "^2.5.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@svgr/webpack": "4.3.3",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "@zycfc/deploy-test": "^1.2.1",
+    "babel-eslint": "10.0.3",
+    "babel-loader": "8.0.6",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-named-asset-import": "^0.3.5",
+    "babel-preset-react-app": "^9.1.0",
+    "camelcase": "^5.3.1",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "cross-env": "^7.0.0",
+    "css-loader": "3.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react-app": "^5.1.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "eslint-loader": "3.0.3",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "3.13.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "file-loader": "4.3.0",
+    "fs-extra": "^8.1.0",
+    "html-webpack-plugin": "4.0.0-beta.5",
+    "husky": "^4.2.3",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^10.0.7",
+    "mini-css-extract-plugin": "0.8.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-normalize": "8.0.1",
+    "postcss-preset-env": "6.7.0",
+    "postcss-safe-parser": "4.0.1",
+    "prettier": "^1.19.1",
+    "react-dev-utils": "10.0.0",
+    "resolve": "1.12.2",
+    "resolve-url-loader": "3.1.1",
+    "rollup": "^1.31.1",
+    "sass": "^1.26.2",
+    "sass-loader": "8.0.0",
+    "semver": "6.3.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "2.2.1",
+    "typescript": "^3.7.4",
+    "url-loader": "2.3.0",
+    "webpack": "4.41.2",
+    "webpack-dev-server": "3.9.0",
+    "webpack-manifest-plugin": "2.2.0",
+    "workbox-webpack-plugin": "4.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "last 7 versions",
+      "not ie <= 8",
+      "ios >= 8",
+      "android >= 4.0",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,html,less,css,scss,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  }
+}

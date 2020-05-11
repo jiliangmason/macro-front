@@ -1,0 +1,50 @@
+{
+  "name": "cms-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index_dev.html --port 9000",
+    "start:sit": "parcel index_dev.html --port 9000",
+    "build:dev": "cross-env NODE_ENV=development SERVER_ENV=dev USE_VERSION=yes webpack --mode development --progress",
+    "build:sit": "cross-env NODE_ENV=development SERVER_ENV=sit USE_VERSION=yes webpack --mode development --progress",
+    "build:uat": "cross-env NODE_ENV=development SERVER_ENV=uat USE_VERSION=yes webpack --mode development --progress",
+    "build:grey": "cross-env NODE_ENV=development SERVER_ENV=grey USE_VERSION=yes webpack --mode development --progress",
+    "build:prod": "cross-env NODE_ENV=production SERVER_ENV=prod PROD=true  USE_VERSION=no webpack --mode production --progress",
+    "pub:dev": "cross-env USE_ANALYZER=No npm run build:dev && deploy-test -S DEV",
+    "pub:sit": "cross-env USE_ANALYZER=No npm run build:sit && deploy-test",
+    "pub:uat": "cross-env USE_ANALYZER=No npm run build:uat && deploy-test -S UAT",
+    "pub:grey": "cross-env USE_ANALYZER=No npm run build:grey && deploy-test -S GREY"
+  },
+  "author": "",
+  "dependencies": {
+    "qiankun": "^2.0.8",
+    "single-spa": "^5.3.1",
+    "antd": "2.13.14",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-react-jsx": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@zycfc/deploy-test": "^1.2.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^2.0.5",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}

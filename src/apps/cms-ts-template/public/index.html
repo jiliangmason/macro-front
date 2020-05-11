@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>中原消费金融</title>
+    <link rel="dns-prefetch" href="//s.hnzycfc.com" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      function outdatedRedirect() {
+        window.location.replace('https://mobile.hnzycfc.com/outdated.html');
+      }
+      var u = navigator.userAgent;
+      var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+      var ver = navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+      (!window.Map ||
+        !window.Set ||
+        (isiOS && parseInt(ver[1], 10) < 8) ||
+        !(window.CSS && window.CSS.supports)) &&
+        outdatedRedirect();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

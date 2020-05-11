@@ -1,0 +1,29 @@
+<!--
+ * @Author: 杨伊乐
+ * @Desctiption: 文件头部
+ * @Date: 2020-04-23 15:57:38
+ * @LastEditors: 杨伊乐
+ * @LastEditTime: 2020-05-11 13:42:38
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>macro-front example</title>
+  </head>
+
+  <body>
+    <div class="mainapp">
+      <!-- 主应用 -->
+      <div id="app_main"></div>
+      <!-- 子应用  -->
+      <main id="subapp-container"></main>
+    </div>
+
+    <script>
+      function push(subapp) {
+        history.pushState(null, subapp, subapp);
+      }
+    </script>
+  </body>
+</html>

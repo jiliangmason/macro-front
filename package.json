@@ -14,18 +14,7 @@
   "scripts": {
     "app:install": "npm-run-all --parallel install:*",
     "app:start": "npm-run-all --parallel start:*",
-    "app:build": "npm-run-all --parallel build:*",
-    "install:main": "cd src/apps/Main && cnpm install",
-    "start:main": "cd src/apps/Main && npm run start",
-    "install:app1": "cd src/apps/App1 && cnpm install",
-    "start:app1": "cd src/apps/App1 && npm run start",
-    "build:app1": "cd src/apps/App1 && npm run build:prod",
-    "install:app2": "cd src/apps/App2 && cnpm install",
-    "start:app2": "cd src/apps/App2 && npm run start",
-    "build:app2": "cd src/apps/App2 && npm run build:prod",
-    "install:app3": "cd src/apps/App3 && cnpm install",
-    "start:app3": "cd src/apps/App3 && npm run start",
-    "build:app3": "cd src/apps/App3 && npm run build:prod"
+    "app:build": "npm-run-all --parallel build:*"
   },
   "repository": {
     "type": "git",
